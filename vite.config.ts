@@ -7,7 +7,7 @@ export default defineConfig({
     host: true, // Allow external access
     port: 4173,  // Your preview port
     allowedHosts: [
-      "vertex.skaya.org", // Allow www subdomain
+      "vertexnexus.skaya.org", // Allow www subdomain
     ],
   },
   plugins: [react()],
