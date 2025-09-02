@@ -168,7 +168,7 @@ const PortfolioComponent = () => {
             style={{ backgroundColor: colors.primary[800] }}
           >
             {/* Control Buttons */}
-            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-4 z-10 px-4 py-2 rounded-full"
+            <div className="absolute top-[40vh] right-0 transform -translate-x-1/2 flex flex-col gap-4 z-10 px-4 py-2 rounded-full"
                  style={{ backgroundColor: `${colors.primary[900]}80` }}>
               {[{action: minimizeModal, icon: <CloseFullscreenIcon/>}, {action: prevProject, icon: <ArrowCircleLeftIcon/>}, {action: nextProject, icon: <ArrowCircleRightIcon/>}, {action: closeModal, icon: <CloseIcon/>}].map((btn, i) => (
                 <button

@@ -110,7 +110,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
 
           {/* Hero Title */}
           <h1
-            className="text-5xl lg:text-7xl font-black leading-tight m-0 transition-colors duration-300"
+            className="text-3xl lg:text-6xl font-black leading-tight m-0 transition-colors duration-300"
             style={{
               color: colors.grey[100],
               textShadow: `0 3px 6px ${colors.grey[900]}33`
