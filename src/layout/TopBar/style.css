@@ -1,0 +1,107 @@
+/* 
+.switch {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 3px;
+    padding-left: 4px;
+    cursor: pointer;
+  }
+  
+  .switch[data-ison="true"] {
+    justify-content: flex-end;
+  }
+   */
+  .handle {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+  }
+  
+
+  /* Add these styles to your style.css file */
+
+.theme-switch {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+}
+
+.theme-switch[data-ison="true"] {
+  justify-content: flex-end;
+}
+
+/* Particle animation for theme switcher */
+.particle {
+  position: absolute;
+  opacity: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-15px) translateX(15px);
+    opacity: 0;
+  }
+}
+
+/* Gradient animation for text */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  --gradient-animation-duration: 3s;
+}
+
+.gradient-text {
+  background-size: 200% 200%;
+  animation: gradient-animation var(--gradient-animation-duration) ease infinite;
+}
+
+/* Glow effect for active elements */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #3b82f6, #6366f1);
+  filter: blur(8px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.glow-effect:hover::after {
+  opacity: 0.4;
+}
+
+
