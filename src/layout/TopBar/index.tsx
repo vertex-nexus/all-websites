@@ -104,8 +104,8 @@ const Header: React.FC<HeaderProps> = ({ setIsSidebarOpen, APP_BAR, isNonMobile 
             >
               <div className="flex space-x-2">
                 <NavLink href="#" label="Home" active />
-                <NavLink href="/about" label="About" />
-                <NavLink href="#contact-us" label="Contact" />
+                <NavLink href="#services" label="About" />
+                <NavLink href="#contact" label="Contact" />
               </div>
             </div>
           </nav>
