@@ -271,7 +271,7 @@ const OurServices = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-8 md:py-12 px-2 md:px-4 text-center mx-auto"
+      <section id="contact" className="py-8 md:py-12 px-2 md:px-4 text-center mx-auto  backdrop-blur-[6px]"
       style={{
               backgroundColor: `${colors.blueAccent[900]}80`,
               borderRadius: '20px',
@@ -282,6 +282,7 @@ const OurServices = () => {
           style={{
             WebkitBackgroundClip: 'text',
             color: colors.secondary[500]
+            
           }}
         >
           Contact Us 📞
