@@ -2,13 +2,15 @@ import { useState, useEffect, useRef } from 'react';
 import { useTheme } from "@mui/material/styles";
 import { tokens } from '../../layout/Theme/themes';
 import { MOCK_WEBSITES } from './Mockwebsite';
-
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import CloseFullscreenIcon from '@mui/icons-material/CloseFullscreen';
+import CloseIcon from '@mui/icons-material/Close';
 const PortfolioComponent = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
   const [currentProjectCode, setCurrentProjectCode] = useState('');
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [portfolioItems] = useState(MOCK_WEBSITES);
@@ -25,24 +27,20 @@ const PortfolioComponent = () => {
     setCurrentProjectIndex(index);
     setCurrentProjectCode(portfolioItems[index].code);
     setIsModalOpen(true);
-    setIsMinimized(false);
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     document.body.style.overflow = '';
-    setIsMinimized(false);
   };
 
   const minimizeModal = () => {
     setIsModalOpen(false);
-    setIsMinimized(true);
   };
 
   const restoreModal = () => {
     setIsModalOpen(true);
-    setIsMinimized(false);
   };
 
   const nextProject = () => {
@@ -172,7 +170,7 @@ const PortfolioComponent = () => {
             {/* Control Buttons */}
             <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-4 z-10 px-4 py-2 rounded-full"
                  style={{ backgroundColor: `${colors.primary[900]}80` }}>
-              {[{action: minimizeModal, icon: 'fa-window-minimize'}, {action: prevProject, icon: 'fa-chevron-left'}, {action: nextProject, icon: 'fa-chevron-right'}, {action: closeModal, icon: 'fa-times'}].map((btn, i) => (
+              {[{action: minimizeModal, icon: <CloseFullscreenIcon/>}, {action: prevProject, icon: <ArrowCircleLeftIcon/>}, {action: nextProject, icon: <ArrowCircleRightIcon/>}, {action: closeModal, icon: <CloseIcon/>}].map((btn, i) => (
                 <button
                   key={i}
                   onClick={btn.action}
@@ -188,7 +186,7 @@ const PortfolioComponent = () => {
                     (e.target as HTMLElement).style.backgroundColor = `${colors.grey[700]}66`;
                   }}
                 >
-                  <i className={`fas ${btn.icon} text-lg`}></i>
+                  <i className={`fas  text-lg`}>{btn.icon}</i>
                 </button>
               ))}
             </div>
@@ -209,7 +207,7 @@ const PortfolioComponent = () => {
       )}
 
       {/* Minimized Window */}
-      {isMinimized && !isModalOpen && (
+      {!isModalOpen && (
         <div 
           className="fixed bottom-5 left-5 rounded-lg px-4 py-2 shadow-lg cursor-pointer z-50 transition-all duration-300 translate-y-0 opacity-100"
           style={{ backgroundColor: `${colors.primary[900]}E6` }}

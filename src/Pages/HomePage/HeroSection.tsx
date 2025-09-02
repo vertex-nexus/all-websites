@@ -76,7 +76,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
     <main
       ref={cardRef}
       className="relative z-10 w-full max-w-full mx-auto px-16 py-8 flex flex-col min-h-[90vh]
-                 rounded-[20px] border  overflow-hidden
+                 rounded-[20px] border backdrop-blur-[2px] overflow-hidden
                  transition-all duration-300 ease-in-out"
       style={{
         borderColor: colors.grey[700],
@@ -239,7 +239,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
         </div>
 
         {/* Hero Visual */}
-        <div className="flex items-center justify-center relative order-first lg:order-last mb-8 lg:mb-0"
+        <div className="flex items-center justify-center relative lg:order-last mb-8 lg:mb-0"
              style={{ perspective: '1000px' }}>
           <img
             src="/logo.svg"
