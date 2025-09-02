@@ -4,7 +4,7 @@ import { GitHub, LinkedIn, Mail, Phone, Twitter } from '@mui/icons-material';
 import { ColorModeContext, getColors } from '../Theme/themes';
 import { motion } from "framer-motion";
 
-const Footer = ({ companyName = 'Skaya' }) => {
+const Footer = ({ companyName = 'Vertex Nexus' }) => {
   const year = new Date().getFullYear();
   const navigate = useNavigate();
 
@@ -49,7 +49,7 @@ const Footer = ({ companyName = 'Skaya' }) => {
                   backgroundImage: `linear-gradient(90deg, ${colors.primary[500]}, ${colors.secondary[500]})`,
                 }}
               >
-               Skaya
+               Vertex Nexus
               </div>
             </motion.button>
 

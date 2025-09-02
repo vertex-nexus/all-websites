@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ setIsSidebarOpen, APP_BAR, isNonMobile 
                   backgroundImage: `linear-gradient(90deg, ${colors.primary[500]}, ${colors.secondary[500]})`,
                 }}
               >
-              Skaya
+              Vertex Nexus
               </div>
             </motion.button>
           </div>
