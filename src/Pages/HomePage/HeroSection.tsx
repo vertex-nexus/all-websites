@@ -76,11 +76,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
     <main
       ref={cardRef}
       className="relative z-10 w-full max-w-full mx-auto px-16 py-8 flex flex-col min-h-[90vh]
-                 rounded-[20px] border backdrop-blur-sm overflow-hidden
+                 rounded-[20px] border  overflow-hidden
                  transition-all duration-300 ease-in-out"
       style={{
         borderColor: colors.grey[700],
-        backgroundColor: `${colors.primary[900]}CC`, // 80% opacity
         boxShadow: `0 8px 32px 0 ${colors.grey[800]}CC`
       }}
     >
