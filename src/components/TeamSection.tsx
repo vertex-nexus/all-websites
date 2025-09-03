@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useEffect, useState } from "react";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { getColors } from "../layout/Theme/themes";
 type TeamSection = {
   quote: string;
   name: string;
@@ -124,7 +125,9 @@ export const TeamSection = ({
             <p className="text-sm text-gray-500 dark:text-neutral-500">
               {teamSection[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+            <motion.p className="mt-8 text-lg  dark:text-neutral-300" style={{
+              color:getColors().grey[300]
+            }}>
               {teamSection[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -154,14 +157,25 @@ export const TeamSection = ({
             <button
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full "
+              style={{
+                backgroundColor: getColors().grey[100],
+                
+              }}
             >
-              <KeyboardArrowLeftIcon className="h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
+              <KeyboardArrowLeftIcon className="h-5 w-5 transition-transform duration-300 group-hover/button:rotate-12 " style={{
+                color: getColors().grey[900]
+              }} />
             </button>
             <button
               onClick={handleNext}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full "
+              style={{
+                backgroundColor: getColors().grey[100],
+              }}
             >
-              <KeyboardArrowRightIcon className="h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
+              <KeyboardArrowRightIcon className="h-5 w-5 transition-transform duration-300 group-hover/button:-rotate-12" style={{
+                color: getColors().grey[900]
+              }}/>
             </button>
           </div>
         </div>
