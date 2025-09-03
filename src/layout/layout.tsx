@@ -1,27 +1,27 @@
-import { useState, useEffect, useRef } from 'react';
-import { Box, useMediaQuery } from '@mui/material';
+import {  useEffect, useRef } from 'react';
+import { Box } from '@mui/material';
 import Header from './TopBar';
-import MiniDrawer from './Navigation';
+// import MiniDrawer from './Navigation';
 import Footer from './Footer/index.tsx';
 import ScrollToTop from './ScrollToTop';
 import AuroraBackground from './Background/AuroraBackground.tsx';
-import { navConfig } from './navConfig';
+// import { navConfig } from './navConfig';
 
 import './global.css';
 import { Outlet } from 'react-router-dom';
 
 export default function DashboardLayout() {
-  const isNonMobile = useMediaQuery('(min-width: 768px)');
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [, setShowOutlet] = useState<boolean>(false);
+  // const isNonMobile = useMediaQuery('(min-width: 768px)');
+  // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // const [, setShowOutlet] = useState<boolean>(false);
   
   const mousePositionRef = useRef({ x: 0, y: 0, lastMove: 0 });
 
   const APP_BAR = '64px';
 
-  const handleSideBarState = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
+  // const handleSideBarState = () => {
+  //   setIsSidebarOpen(!isSidebarOpen);
+  // };
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -48,9 +48,9 @@ export default function DashboardLayout() {
     };
   }, []);
 
-  const getNavConfig = () => {
-    return navConfig;
-  };
+  // const getNavConfig = () => {
+  //   return navConfig;
+  // };
 
   return (
     <>
@@ -67,17 +67,15 @@ export default function DashboardLayout() {
           <ScrollToTop />
           <Header
             APP_BAR={APP_BAR}
-            setIsSidebarOpen={handleSideBarState}
-            isNonMobile={isNonMobile}
           />
-          <MiniDrawer
+          {/* <MiniDrawer
             APP_BAR={APP_BAR}
             setShowOutlet={setShowOutlet}
             isNonMobile={isNonMobile}
             isSidebarOpen={isSidebarOpen}
             setIsSidebarOpen={handleSideBarState}
             navConfig={getNavConfig()}
-          />
+          /> */}
           <Outlet />
           <Footer />
         </Box>

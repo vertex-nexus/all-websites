@@ -39,9 +39,6 @@ const PortfolioComponent = () => {
     setIsModalOpen(false);
   };
 
-  const restoreModal = () => {
-    setIsModalOpen(true);
-  };
 
   const nextProject = () => {
     const nextIndex = (currentProjectIndex + 1) % portfolioItems.length;
@@ -60,8 +57,7 @@ const PortfolioComponent = () => {
     <>
       <section 
         id="our-portfolio" 
-        className="py-8 px-2"
-        style={{ backgroundColor: colors.primary[900] }}
+        className="py-8 px-2 rounded-3xl m-4 backdrop-blur-[4px] "
       >
         {/* Title */}
         <h2 
@@ -102,7 +98,7 @@ const PortfolioComponent = () => {
                   key={index}
                   className="w-72 m-4 md:w-80 h-96 md:h-[400px] flex-shrink-0 rounded-3xl overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 cursor-pointer group"
                   style={{
-                    backgroundColor: `${colors.primary[700]}33`, // Light transparent background
+                    backgroundColor: `${colors.blueAccent[900]}33`, // Light transparent background
                     border: `1px solid ${colors.secondary[800]}`,
                     boxShadow: `0 4px 20px ${colors.grey[900]}20`
                   }}
@@ -206,27 +202,7 @@ const PortfolioComponent = () => {
         </div>
       )}
 
-      {/* Minimized Window */}
-      {!isModalOpen && (
-        <div 
-          className="fixed bottom-5 left-5 rounded-lg px-4 py-2 shadow-lg cursor-pointer z-50 transition-all duration-300 translate-y-0 opacity-100"
-          style={{ backgroundColor: `${colors.primary[900]}E6` }}
-          onClick={restoreModal}
-        >
-          <div className="flex items-center gap-2">
-            <i 
-              className="fas fa-window-maximize text-2xl"
-              style={{ color: colors.secondary[500] }}
-            ></i>
-            <span 
-              className="font-bold"
-              style={{ color: colors.grey[100] }}
-            >
-              Demo Website
-            </span>
-          </div>
-        </div>
-      )}
+
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { GitHub, LinkedIn, Mail, Phone, Twitter } from '@mui/icons-material';
+import { GitHub, LinkedIn, Mail, Phone, Instagram } from '@mui/icons-material';
 import { ColorModeContext, getColors } from '../Theme/themes';
 import { motion } from "framer-motion";
 
@@ -78,7 +78,7 @@ const Footer = ({ companyName = 'Vertex Nexus' }) => {
             >
               <Mail />
               <a
-                href="mailto:team@vertexnexus.com"
+                href="mailto:team@skaya.com"
                 className="hover:underline"
                 style={{ color: colors.primary[300] }}
               >
@@ -93,11 +93,11 @@ const Footer = ({ companyName = 'Vertex Nexus' }) => {
             >
               <Phone />
               <a
-                href="tel:+917310747066"
+                href="tel:+919310739038"
                 className="hover:underline"
                 style={{ color: colors.primary[300] }}
               >
-                +91 7310747066
+                +91 9310739038
               </a>
             </div>
           </div>
@@ -117,7 +117,7 @@ const Footer = ({ companyName = 'Vertex Nexus' }) => {
                   Icon: LinkedIn,
                   href: 'https://linkedin.com/company/skaya-org',
                 },
-                { Icon: Twitter, href: 'https://twitter.com/skaya-org' },
+                { Icon: Instagram, href: 'https://instagram.com/skaya.organization' },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}

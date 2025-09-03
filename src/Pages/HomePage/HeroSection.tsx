@@ -76,7 +76,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
     <main
       ref={cardRef}
       className="relative z-10 w-full max-w-full mx-auto px-16 py-8 flex flex-col min-h-[90vh]
-                 rounded-[20px] border backdrop-blur-[2px] overflow-hidden
+                 rounded-[20px] border backdrop-blur-[4px] overflow-hidden
                  transition-all duration-300 ease-in-out"
       style={{
         borderColor: colors.grey[700],
@@ -153,7 +153,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
           <div className="flex gap-6 items-center flex-wrap justify-center lg:justify-start">
             <a
               href="#our-portfolio"
-              className="group inline-flex items-center gap-3 px-10 py-4 rounded-2xl font-bold text-lg
+              className="group inline-flex items-center gap-3 px-10 py-4 rounded-2xl font-bold text-md
                            text-white cursor-pointer transition-all duration-300 ease-out
                            transform hover:-translate-y-1 hover:shadow-2xl relative overflow-hidden"
               style={{
@@ -185,7 +185,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onCardHoverState }) => {
 
             <a
               href="#contact"
-              className="group inline-flex items-center gap-3 px-10 py-4 rounded-2xl font-bold text-lg
+              className="group inline-flex items-center gap-3 px-10 py-4 rounded-2xl font-bold text-md
                            cursor-pointer transition-all duration-300 ease-out backdrop-blur-md border
                            transform hover:-translate-y-1 relative overflow-hidden"
               style={{
