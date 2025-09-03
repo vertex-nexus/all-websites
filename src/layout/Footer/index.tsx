@@ -55,8 +55,7 @@ const Footer = ({ companyName = 'Vertex Nexus' }) => {
 
           {/* Description */}
           <p style={{ color: colors.grey[400], fontSize: '14px', lineHeight: '1.6' }}>
-            {companyName} empowers you to build your own Web3 app effortlessly —
-            no code, no hassle, just pure AI magic.
+            {companyName} Vertex Nexus delivers cutting-edge software solutions to help you build and scale Web3 applications effortlessly.No Hassle. No complexity. Just seamless development.
           </p>
         </div>
 
