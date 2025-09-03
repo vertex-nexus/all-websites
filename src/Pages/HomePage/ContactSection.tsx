@@ -47,7 +47,7 @@ const ContactSection: React.FC<Props> = ({ whatsappLink }) => {
   return (
     <section
       id="contact"
-      className="py-8 md:py-12 px-2 md:px-4 text-center mx-auto backdrop-blur-[6px] backdrop-blur-sm"
+      className="py-8 md:py-12 px-2 md:px-4 text-center mx-auto backdrop-blur-[24px]"
       style={{
         borderRadius: "20px"
       }}

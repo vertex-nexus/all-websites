@@ -37,7 +37,7 @@ const Footer = ({ companyName = 'Vertex Nexus' }) => {
         {/* Left Section */}
         <div className="flex flex-col space-y-6 max-w-sm">
           {/* Logo */}
-              <motion.button
+            <motion.button
               onClick={() => navigate("/")}
               className="flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
