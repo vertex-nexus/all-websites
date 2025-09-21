@@ -116,7 +116,7 @@ const Footer = ({ companyName = 'Vertex Nexus' }) => {
                   Icon: LinkedIn,
                   href: 'https://linkedin.com/company/skaya-org',
                 },
-                { Icon: Instagram, href: 'https://instagram.com/skaya.organization' },
+                { Icon: Instagram, href: 'https://instagram.com/skaya_org_' },
               ].map(({ Icon, href }, i) => (
                 <a
                   key={i}
